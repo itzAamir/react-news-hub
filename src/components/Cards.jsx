@@ -8,9 +8,13 @@ const Cards = () => {
       const getData = async () => {
          const url =
             "https://newsapi.org/v2/everything?q=tech&apiKey=eb2e97fca1fe4014bd237478bec7bbad";
-         const res = await axios.get(url);
-         const data = res.data.articles;
-         setCard(data.map((e, i) => <Card key={i} data={e} />));
+         axios
+            .get(url)
+            .then((res) => {
+               const data = res.data.articles;
+               setCard(data.map((e, i) => <Card key={i} data={e} />));
+            })
+            .catch((err) => console.log(err));
       };
       getData();
    }, []);

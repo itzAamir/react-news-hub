@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card = ({ data }) => {
-   console.log(data.title);
    return (
       <div className="card">
          <a href={data.url} rel="noreferrer" target="_blank">
