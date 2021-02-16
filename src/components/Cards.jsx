@@ -5,9 +5,8 @@ import axios from "axios";
 const Cards = () => {
    const [card, setCard] = useState();
    useEffect(() => {
-      const getData = async () => {
-         const url =
-            "https://newsapi.org/v2/everything?q=tech&apiKey=eb2e97fca1fe4014bd237478bec7bbad";
+      const getData = () => {
+         const url = `http://newsapi.org/v2/everything?q=tech&from=2021-01-15&apiKey=${process.env.REACT_APP_API_KEY}`;
          axios
             .get(url)
             .then((res) => {

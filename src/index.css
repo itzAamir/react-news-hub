@@ -42,26 +42,44 @@ nav {
 .card {
    width: 100%;
    background-color: #25282c;
-   height: 100%;
+   height: 440px;
    border-radius: 20px;
    padding: 10px;
    position: relative;
-   overflow: hidden;
-   text-overflow: ellipsis;
 }
 
 a {
    color: white;
 }
 
+.title-div {
+   height: max-content;
+   padding: 5px;
+}
+
+.additional-info {
+   padding: 10px;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 70%;
+   width: 100%;
+}
+
 .img-div {
-   margin-top: 30px;
    border-radius: 20px;
    overflow: hidden;
+   width: 100%;
+   height: 60%;
 }
 
 .card img {
    width: 100%;
+}
+
+.info {
+   position: absolute;
+   bottom: 50px;
 }
 
 .info h3 {
@@ -71,6 +89,10 @@ a {
 }
 
 .btn-div {
+   bottom: 10px;
+   position: absolute;
+   left: 0;
+   width: 100%;
    margin-top: 10px;
    display: grid;
    place-items: center;
